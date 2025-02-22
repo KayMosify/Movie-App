@@ -122,7 +122,9 @@
 
 /* View All Button */
 .viewAllBtn {
-  display: block;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
   margin: 1rem auto;
   padding: 10px 20px;
   border: 1px solid cyan;

@@ -11,6 +11,7 @@ import Next from "/src/assets/next.png";
 import Prev from "/src/assets/prev.png";
 import styles from './TopRatedM.module.css'; 
 import { Link } from 'react-router-dom';
+import { BiChevronRight } from "react-icons/bi";
 
 const key = import.meta.env.VITE_APP_API_KEY; 
 const url = import.meta.env.VITE_APP_BASE_URL; 
@@ -133,7 +134,7 @@ const TopRatedM = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Link to="/top-rated-m"><button className={styles.viewAllBtn}>See More</button></Link>
+      <Link to="/top-rated-m"><button className={styles.viewAllBtn}>View All <BiChevronRight size={30}/></button></Link>
     </div>
   );
 };

@@ -92,7 +92,8 @@ const TrendingMovies = () => {
               <div className={styles.overlay}>
                 <div className={styles.descriptionContainer}>
                   <h1 className={styles.movieTitle}>{movie.title}</h1>
-                  <p className={styles.movieOverview}>{movie.overview.substring(0, 350)}...</p>
+                  <p className={styles.movieOverview}>{window.innerWidth < 480 ? movie.overview.substring(0, 100) + "..." 
+                : movie.overview.substring(0, 300) + "..."}</p>
                   <div className={styles.movieGenres}>
                     {movie.genre_ids.map(id => (
                       <span key={id} className={styles.genreButton}>{genres[id]}</span>

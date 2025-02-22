@@ -11,6 +11,7 @@ import Next from "/src/assets/next.png";
 import Prev from "/src/assets/prev.png";
 import styles from './OnAir.module.css';
 import { Link } from 'react-router-dom';
+import { BiChevronRight } from "react-icons/bi";
 
 const key = import.meta.env.VITE_APP_API_KEY;
 const url = import.meta.env.VITE_APP_BASE_URL;
@@ -128,7 +129,7 @@ const OnAir = () => {
               </SwiperSlide>
             ))}
       </Swiper>
-      <Link to="./on-air"><button className={styles.viewAllBtn}>See More</button></Link>
+      <Link to="./on-air"><button className={styles.viewAllBtn}>See More <BiChevronRight size={30} /></button></Link>
     </div>
   );
 };

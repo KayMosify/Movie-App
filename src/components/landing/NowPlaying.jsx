@@ -11,6 +11,7 @@ import Next from "/src/assets/next.png";
 import Prev from "/src/assets/prev.png";
 import styles from './NowPlaying.module.css'; 
 import { Link } from 'react-router-dom';
+import { BiChevronRight } from "react-icons/bi";
 
 const key = import.meta.env.VITE_APP_API_KEY; 
 const url = import.meta.env.VITE_APP_BASE_URL; 
@@ -138,7 +139,7 @@ const NowPlaying = () => {
         ))}
       </Swiper>
       <Link to="/now-playing" >
-        <button className={styles.viewAllBtn}>Watch them</button>
+        <button className={styles.viewAllBtn}>Watch them <BiChevronRight size={30}/></button>
       </Link>
     </div>
   );
