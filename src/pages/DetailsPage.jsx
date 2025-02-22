@@ -4,6 +4,11 @@ import axios from 'axios';
 import styles from './Details.module.css';
 import Navbar from '../components/NavBar';
 import Footer from '../components/Footer';
+import Playlist from '../assets/playlist.png';
+import Like from '../assets/like.png';
+import Dislike from '../assets/dislike.png';
+import StarRating from "../components/StarRating";
+import { Link } from 'react-router-dom'; 
 
 const key = import.meta.env.VITE_APP_API_KEY;
 const url = import.meta.env.VITE_APP_BASE_URL;
@@ -22,7 +27,6 @@ const TVDetailsPage = () => {
         const res = await axios.get(`${url}/tv/${id}?append_to_response=videos,images,credits,similar`, {
           headers: { accept: 'application/json', Authorization: `Bearer ${key}` }
         });
-
         setShow(res.data);
         setCredits(res.data.credits.cast.slice(0, 5)); // Limit to 5 main actors
         setSimilarShows(res.data.similar.results.slice(0, 5)); // Limit to 5 similar shows
@@ -43,8 +47,16 @@ const TVDetailsPage = () => {
       <div className={styles.detailsPage}>
         <div className={styles.header} style={{ backgroundImage: `url(${imgBase}${show.backdrop_path})` }}>
           <div className={styles.overlay}>
+            <div className={styles.movieDescription}>
             <h1>{show.name}</h1>
             <p>{show.first_air_date.split('-')[0]} • {show.episode_run_time?.[0] || "N/A"} min per episode • {show.production_countries[0]?.iso_3166_1}</p>
+             <StarRating rating={show.vote_average} size={32} />
+            <div className={styles.playlistCont}>
+               <img src={Playlist} alt="" />
+               <img src={Like} alt="" />
+               <img src={Dislike} alt="" />
+            </div>
+            </div>
             <div className={styles.buttons}>
               <button className={styles.watchBtn}>▶ Watch Now</button>
               <button className={styles.previewBtn}>Preview</button>

@@ -8,6 +8,7 @@ import Playlist from '../assets/playlist.png';
 import Like from '../assets/like.png';
 import Dislike from '../assets/dislike.png';
 import StarRating from "../components/StarRating"; 
+import { Link } from 'react-router-dom';
 
 const key = import.meta.env.VITE_APP_API_KEY;
 const url = import.meta.env.VITE_APP_BASE_URL;
@@ -19,8 +20,6 @@ const MovieDetailsPage = () => {
   const [credits, setCredits] = useState([]);
   const [similarMovies, setSimilarMovies] = useState([]);
   const [gallery, setGallery] = useState([]);
-
-  
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -113,7 +112,7 @@ const MovieDetailsPage = () => {
         <div className={styles.section}>
           <h3>Suggestions like "{movie.title}"</h3>
           <div className={styles.similarMovies}>
-            {similarMovies.map((sim) => (
+            {similarMovies.map((sim) => ( 
               <div key={sim.id} className={styles.similarCard}>
                 <img src={sim.poster_path ? `${imgBase}${sim.poster_path}` : '/src/assets/no-image.png'} alt={sim.title} />
                 <p>{sim.title}</p>

@@ -156,6 +156,12 @@ h3 {
   padding: 50px;
 }
 
+.linkWrapper {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+}
+
 /* Desktops (min-width: 1200px) */
 @media (min-width: 1200px) {
   .overlay {

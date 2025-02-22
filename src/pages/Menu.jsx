@@ -7,6 +7,7 @@ import TopRatedS from '../components/landing/TopRatedS'
 import AiringToday from '../components/landing/AiringToday'
 import OnAir from '../components/landing/OnAir'
 import Footer from '../components/Footer'
+import Signup from '../components/Signup'
 
 
 const Menu = () => {
@@ -19,6 +20,7 @@ const Menu = () => {
       <TopRatedS/>
       <AiringToday/>
       <OnAir/>
+      <Signup/>
       <Footer/>
     </>
   )
