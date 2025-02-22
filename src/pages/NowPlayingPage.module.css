@@ -18,6 +18,12 @@
   padding: 20px;
 }
 
+.linkWrapper {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+}
+
 .movieCard {
   position: relative;
   background: #1e1e1e;

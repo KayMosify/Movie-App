@@ -3,6 +3,7 @@ import axios from 'axios';
 import styles from './TopRatedMPage.module.css';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
+import { Link } from 'react-router-dom';
 
 const key = import.meta.env.VITE_APP_API_KEY; 
 const url = import.meta.env.VITE_APP_BASE_URL; 
@@ -55,6 +56,7 @@ const TopRatedPage = () => {
         <h2 className={styles.pageTitle}>Top Rated Movies</h2>
         <div className={styles.moviesGrid}>
           {movies.map((movie) => (
+            <Link to={`/movie/${movie.id}`} className={styles.linkWrapper}>
             <div key={movie.id} className={styles.movieCard}>
               {/* Poster */}
               <div className={styles.moviePoster}>
@@ -86,6 +88,7 @@ const TopRatedPage = () => {
               {/* Title */}
               <h3 className={styles.movieTitle}>{movie.title}</h3>
             </div>
+            </Link>
           ))}
         </div>
       </div>

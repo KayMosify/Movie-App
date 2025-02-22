@@ -3,6 +3,7 @@ import axios from 'axios';
 import styles from './OnAirPage.module.css';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
+import { Link } from 'react-router-dom';
 
 const key = import.meta.env.VITE_APP_API_KEY;
 const url = import.meta.env.VITE_APP_BASE_URL;
@@ -51,6 +52,7 @@ const OnAirPage = () => {
           {onAirShows.length > 0 ? (
             onAirShows.map((show) =>
               show.poster_path ? (
+                 <Link to={`/tv/${show.id}`} className={styles.linkWrapper}>
                 <div key={show.id} className={styles.showCard}>
                   {/* Poster */}
                   <div className={styles.showPoster}>
@@ -84,6 +86,7 @@ const OnAirPage = () => {
                   {/* Title */}
                   <h3 className={styles.showTitle}>{show.name}</h3>
                 </div>
+                </Link>
               ) : null
             )
           ) : (
