@@ -4,6 +4,10 @@ import axios from 'axios';
 import styles from './Details.module.css';
 import Navbar from '../components/NavBar';
 import Footer from '../components/Footer';
+import Playlist from '../assets/playlist.png';
+import Like from '../assets/like.png';
+import Dislike from '../assets/dislike.png';
+import StarRating from "../components/StarRating"; 
 
 const key = import.meta.env.VITE_APP_API_KEY;
 const url = import.meta.env.VITE_APP_BASE_URL;
@@ -15,6 +19,8 @@ const MovieDetailsPage = () => {
   const [credits, setCredits] = useState([]);
   const [similarMovies, setSimilarMovies] = useState([]);
   const [gallery, setGallery] = useState([]);
+
+  
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -42,8 +48,16 @@ const MovieDetailsPage = () => {
       <div className={styles.detailsPage}>
         <div className={styles.header} style={{ backgroundImage: `url(${imgBase}${movie.backdrop_path})` }}>
           <div className={styles.overlay}>
-            <h1>{movie.title}</h1>
+            <div className={styles.movieDescription}>
+              <h1>{movie.title}</h1>
             <p>{movie.runtime} min • {movie.release_date.split('-')[0]} • {movie.production_countries[0]?.iso_3166_1}</p>
+            <StarRating rating={movie.vote_average} size={32} />
+            <div className={styles.playlistCont}>
+               <img src={Playlist} alt="" />
+               <img src={Like} alt="" />
+               <img src={Dislike} alt="" />
+            </div>
+            </div>
             <div className={styles.buttons}>
               <button className={styles.watchBtn}>▶ Watch Now</button>
               <button className={styles.previewBtn}>Preview</button>
