@@ -74,16 +74,16 @@ form {
 input::placeholder {
   color: gray;
   font: 14px;
-  padding-left: 30px;
 }
 
 .signup-form input {
   width: 100%;
-  padding: 15px;
+  padding: 15px 15px 15px 40px;
   margin-bottom: 15px;
   border: 1px solid white;
   background-color: transparent;
   border-radius: 5px;
+  color: white;
 
 }
 
