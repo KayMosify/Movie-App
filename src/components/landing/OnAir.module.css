@@ -1,0 +1,247 @@
+.onAirContainer {
+  width: 100%;
+  padding: 2rem;
+  padding-top: 5rem;
+  background: #2b2b2b;
+  color: white;
+  text-align: left;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.linkWrapper {
+  text-decoration: none; 
+  color: inherit; 
+  display: block; 
+}
+
+.onAirSwiper {
+  padding-bottom: 2rem;
+  max-width: 90%;
+}
+
+.tvShowCard {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 450px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.tvShowCard:hover {
+  transform: scale(1.05);
+}
+
+.tvShowPoster img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.tvShowOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tvShowCard:hover .tvShowOverlay {
+  opacity: 1;
+}
+
+.tvShowOverview {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.tvShowGenres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.genreTag {
+  padding: 5px 10px;
+  border: 1px solid yellow;
+  background: rgba(255, 255, 0, 0.2);
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Info Section */
+.tvShowInfo {
+  max-width: 300px;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 0px 10px rgba(15, 15, 15, 0.8);
+}
+
+/* Rating & Duration */
+.rating, 
+.duration {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating img, 
+.duration img {
+  width: 20px;
+  height: 20px;
+}
+
+/* TV Show Title */
+.tvShowTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* View All Button */
+.viewAllBtn {
+  display: block;
+  margin: 1rem auto;
+  padding: 10px 20px;
+  border: 1px solid cyan;
+  background: transparent;
+  color: cyan;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.viewAllBtn:hover {
+  background: cyan;
+  color: black;
+}
+
+.header {
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.navigationWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.swiperButtonPrev, 
+.swiperButtonNext {
+  color: red;
+  background: #1e1e1e;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: 0.3s ease;
+}
+.swiperButtonPrev:hover, 
+.swiperButtonNext:hover {
+  background: #2b2b2b;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .onAirSwiper {
+    max-width: 95%;
+  }
+  .tvShowCard {
+    width: 250px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .onAirContainer {
+    padding: 2rem 1rem;
+  }
+  .tvShowCard {
+    width: 300px;
+    height: 340px;
+  }
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tvShowCard {
+    width: 180px;
+    height: 280px;
+  }
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  .tvShowInfo {
+    display: flex;
+    flex-direction: column;
+     max-width: 180px;
+  }
+  a.linkWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 375px) {
+.tvShowCard {
+    width: 160px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 250px) {
+  .tvShowCard {
+    width: 180px;
+    height: 280px;
+  }
+  .sectionTitle {
+    font-size: 1.2rem;
+  }
+  .tvShowInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 180px;
+  }
+
+   a.linkWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

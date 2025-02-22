@@ -1,0 +1,108 @@
+.onAirPage {
+  text-align: center;
+  padding: 20px;
+  background-color: #121212;
+  color: #fff;
+  padding-top: 10rem;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.showsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.showCard {
+  position: relative;
+  background: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  padding: 10px;
+}
+
+.showCard:hover {
+  transform: scale(1.05);
+}
+
+.showPoster img {
+  width: 100%;
+  border-radius: 5px;
+  height: 320px;
+  object-fit: cover;
+}
+
+.showOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  padding: 15px;
+  text-align: left;
+}
+
+.showCard:hover .showOverlay {
+  opacity: 1;
+}
+
+.showOverview {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.showGenres {
+  margin-top: 10px;
+}
+
+.genreTag {
+  display: inline-block;
+  background: #ff4081;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.showInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  margin-top: 10px;
+}
+
+.rating, .duration {
+  display: flex;
+  align-items: center;
+}
+
+.rating img, .duration img {
+  width: 18px;
+  margin-right: 5px;
+}
+
+.showTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.noShows {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 20px;
+}

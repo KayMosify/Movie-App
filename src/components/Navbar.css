@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  position: fixed;
+  width: 90%;
+  margin: 0 5%;
+  top: 0;
+  z-index: 1000;
+  margin-top: 2rem;
+  border-radius: 16px;
+  border: 0.2px solid rgb(255, 43, 43);
+}
+
+/* Left side (Menu & Links) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-right: 15px;
+  padding-right: 1rem;
+  border-right: 2px solid #fff;
+  font-family: Fleur De Leah, serif;
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-family: Fleur De Leah, serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: red;
+}
+
+/* Right Side (Search & Buttons) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: white;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 14px;
+  background-color: transparent;
+  color: white;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+}
+
+/* Login & Signup Buttons */
+.login-btn,
+.signup-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 65px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.signup-btn {
+  background: transparent;
+  border: 1px solid red;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.signup-btn:hover {
+  background: red;
+  color: white;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .login-btn,
+  .signup-btn {
+    display: none;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+.navbar {
+  padding:8px 10px ;
+}
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .line {
+    height: 2px;
+    width: 16px;
+    background-color: white;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .search-box {
+    display: none;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
