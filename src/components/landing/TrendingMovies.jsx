@@ -29,7 +29,7 @@ const TrendingMovies = () => {
           Authorization: `Bearer ${key}`
         }
       });
-      setTrending(res.data.results.slice(0, 5));
+      setTrending(res.data.results.slice(6, 10));
     } catch (error) {
       console.error('Error fetching movies:', error);
     }

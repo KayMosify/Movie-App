@@ -32,7 +32,7 @@ const HeroSection = () => {
         }
       });
       console.log(res.data);
-      setTrending(res.data.results.slice(0,5))
+      setTrending(res.data.results.slice(1,6))
     } catch (error) {
       console.error('Error fetching movies:', error)
     }

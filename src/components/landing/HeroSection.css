@@ -53,12 +53,14 @@
 }
 
 .description-container {
-  max-width: 350px;
+  max-width: 550px;
 }
 
 h1.movie-title {
-  font-size: 4rem;
+  width: 100%;
+  font-size: 3rem;
   font-weight: 700;
+  
 }
 
 p.movie-overview {
