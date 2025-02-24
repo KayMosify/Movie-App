@@ -4,6 +4,8 @@ import styles from './OnAirPage.module.css';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
 import { Link } from 'react-router-dom';
+import Imdb from "/src/assets/imdb.png"
+import TimeLogo from "/src/assets/time-logo.png"
 
 const key = import.meta.env.VITE_APP_API_KEY;
 const url = import.meta.env.VITE_APP_BASE_URL;
@@ -74,12 +76,12 @@ const OnAirPage = () => {
                   {/* Info (Rating & Duration) */}
                   <div className={styles.showInfo}>
                     <div className={styles.rating}>
-                      <img src="/src/assets/imdb.png" alt="IMDb" />
+                      <img src={Imdb} alt="IMDb" />
                       <span>{show.vote_average ? `${show.vote_average.toFixed(1)}/10` : "N/A"}</span>
                     </div>
                     <div className={styles.duration}>
-                      <img src="/src/assets/time-logo.png" alt="Duration" />
-                      <span>45m per episode</span>
+                      <img src={TimeLogo} alt="Duration" />
+                      <span>3:10 hours</span>
                     </div>
                   </div>
 

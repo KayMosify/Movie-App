@@ -4,6 +4,9 @@ import styles from './TopRatedMPage.module.css';
 import Footer from '../components/Footer';
 import Navbar from '../components/NavBar';
 import { Link } from 'react-router-dom';
+import Imdb from "/src/assets/imdb.png"
+import TimeLogo from "/src/assets/time-logo.png"
+
 
 const key = import.meta.env.VITE_APP_API_KEY; 
 const url = import.meta.env.VITE_APP_BASE_URL; 
@@ -76,11 +79,11 @@ const TopRatedPage = () => {
               {/* Movie Info (Rating & Duration) */}
               <div className={styles.movieInfo}>
                 <div className={styles.rating}>
-                  <img src="/src/assets/imdb.png" alt="IMDb" />
+                  <img src={Imdb} alt="IMDb" />
                   <span>{movie.vote_average.toFixed(1)}/10</span>
                 </div>
                 <div className={styles.duration}>
-                  <img src="/src/assets/time-logo.png" alt="Duration" />
+                  <img src={TimeLogo} alt="Duration" />
                   <span>2h 30m</span> {/* Static Time (Replace with API Data if available) */}
                 </div>
               </div>
