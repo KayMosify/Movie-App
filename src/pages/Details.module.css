@@ -238,6 +238,16 @@ h3 {
     justify-content: center;
     gap: 0.8rem;
   }
+   .actorCard {
+  text-align: center;
+  font-size: small;
+}
+
+.actorCard img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+}
 }
 
 /* Small Phones (max-width: 480px) */
@@ -263,6 +273,16 @@ h3 {
   .playlistCont {
     flex-wrap: wrap;
   }
+  .actorCard {
+  text-align: center;
+  font-size: smaller;
+}
+
+.actorCard img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
 }
 
 /* Extra Small Screens (max-width: 250px) */

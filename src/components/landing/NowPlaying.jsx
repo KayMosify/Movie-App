@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import ImdbLogo from "/src/assets/imdb.png";
+import Imdb from "/src/assets/imdb.png";
 import TimeLogo from "/src/assets/time-logo.png";
 import Next from "/src/assets/next.png";
 import Prev from "/src/assets/prev.png";
@@ -125,11 +125,11 @@ const NowPlaying = () => {
             </div>
             <div className={styles.movieInfo}>
                 <div className={styles.rating}>
-                  <img src="/src/assets/imdb.png" alt="IMDb" />
+                  <img src={Imdb} alt="IMDb" />
                   <span>{movie.vote_average}/10</span>
                 </div>
                 <div className={styles.duration}>
-                  <img src="/src/assets/time-logo.png" alt="Duration" />
+                  <img src={TimeLogo} alt="Duration" />
                   <span>2h 30m</span>
                 </div>
               </div>
