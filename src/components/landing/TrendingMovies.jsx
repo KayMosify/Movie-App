@@ -101,14 +101,14 @@ const TrendingMovies = () => {
                   </div>
                   <div className={styles.movieRating}>
                     <div className={styles.ratingDiv}>
-                      <img src={Imdb} alt="IMDB Logo" />
+                      <div><img src={Imdb} alt="IMDB Logo" /></div>
                       <p style={{ color: "yellow" }}>
                         {movie.vote_average}
                         <span style={{ color: "white" }}>/10</span>
                       </p>
                     </div>
                     <div className={styles.timingDiv}>
-                      <img src={TimeLogo} alt="Time Logo" />
+                     <div> <img src={TimeLogo} alt="Time Logo" /></div>
                       <p>3:10 Hours</p>
                     </div>
                   </div>
