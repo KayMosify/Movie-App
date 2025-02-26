@@ -17,9 +17,9 @@ const Navbar = () => {
         </button>
         <ul className="nav-links">
           <li><a href="/">Home</a></li>
-          <li><a href="/movies">Movies</a></li>
-          <li><a href="/series">Series</a></li>
-          <li><a href="/about">About Us</a></li>
+          <li><a href="/now-playing">Movies</a></li>
+          <li><a href="/on-air">Series</a></li>
+          <li><a href="/">About Us</a></li>
         </ul>
       </div>
 
